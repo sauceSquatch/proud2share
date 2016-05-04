@@ -1,0 +1,59 @@
+include ../mixins/flash-messages
+ 
+unless partial
+
+  doctype html
+  html
+    head
+      meta(charset="utf-8")
+      meta(name="viewport", content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width")
+      
+      title= title || 'proud2share'
+      link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
+      
+      link(href="/css/p2s.css", rel="stylesheet")
+      
+      block css
+      block head
+
+    body
+        
+      header
+
+        nav
+
+          a(href="/") Home
+      
+      main
+          
+        +flash-messages(messages)
+        
+        block content
+      
+      footer &copy; #{new Date().getFullYear()} Proud 2 Share
+
+    if environment === 'production'
+      script(src='//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js')
+
+    else
+      script(src='//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.js')
+      //- Enable Livereload
+      script.
+        var host = (location.host || 'localhost').split(':')[0],
+            livereloadScript = document.createElement('script');
+        livereloadScript.src = 'http://' + host + ':35729/livereload.js?snipver=1&host=' + host;
+        document.body.appendChild(livereloadScript);
+    
+    script.
+      if (!jQuery) {
+        var script = document.createElement('script');
+        script.src = '/js/vendor/jquery.js';
+        document.body.appendChild('script');
+      }
+    script(src='/js/p2s.js')
+    
+    block js
+
+else
+
+  block content

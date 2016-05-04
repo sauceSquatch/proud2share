@@ -1,0 +1,22 @@
+section.module.stories
+
+  if stories && stories.length
+
+    each story in stories
+
+      div.story
+
+        h2 Meet #{story.name}
+
+        p Homeless for #{story.yearsHomeless}
+
+        dl
+          dt Age
+          dd #{story.age}
+
+          dt Shoe Location
+          dd #{story.shoeLocation}
+
+        | !{story.content}
+
+        button Call to Action

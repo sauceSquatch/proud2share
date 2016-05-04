@@ -1,0 +1,8 @@
+section.module.sponsors
+
+  if sponsors && sponsors.length
+    h2 Sponsors
+
+    ul
+      each sponsor in sponsors
+        li: a(href=sponsor.url) #{sponsor.name}
