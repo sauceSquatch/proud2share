@@ -19,6 +19,8 @@ You must be running Node version 5.10.1 and NPM version 3.8.3 or later. Use Node
 
 After running `npm install` you will need to set up a `.env` file in the project root that sets your Node environment variables. We intentionally do not include this file in source control as it contains credentials that will be set by Heroku in production. Contact [brad.tippett@razorfish.com](mailto:brad.tippett@razorfish.com) for a copy of the file.
 
+We are using Babel 6 while Keystone JS uses Babel 5 for its admin interface. If you get Babel errors compiling files in the `/node_modules/keystone` folder run `npm install` from that folder to install local versions of the Keystone JS dependencies.
+
 ## Developing and Debugging
 
 To start the site in development mode use the command `npm run develop`. When running in development mode nodemon and livereload will be enabled. Nodemon automatically restarts the server when any of the application source changes. Livereload will refresh your browser automatically when you make changes to the CSS or JavaScript.

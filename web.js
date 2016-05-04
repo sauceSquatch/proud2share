@@ -20,7 +20,7 @@ keystone.init({
 
   'mandrill': CONFIG.get('MANDRILL_API_KEY'),
   
-  'env': CONFIG.get('ENVIRONMENT'),
+  'env': CONFIG.get('NODE_ENV'),
   'port': CONFIG.get('PORT'),
   'compress': true,
   'session': true,
@@ -37,7 +37,7 @@ compiler.compile('/src/css/', '/public/css/');
 compiler.compile('/src/js/', '/public/js/');
 
 // Turn on source watching and Live Reload in development
-if (CONFIG.get('ENVIRONMENT') === 'development') {
+if (CONFIG.get('NODE_ENV') === 'development') {
   let livereload = require('livereload'),
       reloadServer = livereload.createServer({ exts: ['css','js'], host: 'localhost' });
 
