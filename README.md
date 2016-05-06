@@ -15,7 +15,7 @@ This is the `proud2share.org` site, a pro bono undertaking of the Razorfish cent
 
 ## Environment Setup
 
-You must be running Node version 5.10.1 and NPM version 3.8.3 or later. Use Node Version Manager [(NVM)](https://github.com/creationix/nvm) so you can choose your Node version.
+You must be running Node version 5.10.1. Use Node Version Manager [(NVM)](https://github.com/creationix/nvm) so you can choose your Node version. You also need to be up and running with [Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up).
 
 After running `npm install` you will need to set up a `.env` file in the project root that sets your Node environment variables. We intentionally do not include this file in source control as it contains credentials that will be set by Heroku in production. Contact [brad.tippett@razorfish.com](mailto:brad.tippett@razorfish.com) for a copy of the file.
 
