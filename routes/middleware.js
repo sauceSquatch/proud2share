@@ -12,7 +12,7 @@ exports.initLocals = (request, response, next) => {
 
   let locals = response.locals;
 
-  locals.environment = (process.env === 'production') ? 'production' : 'development'
+  locals.environment = (process.env.NODE_ENV === 'production') ? 'production' : 'development'
   locals.partial = !!request.query.partial || false;
   locals.user = request.user;
   locals.modules = [];
