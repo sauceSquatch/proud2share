@@ -24,7 +24,7 @@
     "develop": "heroku local develop",
     "debug": "heroku local debug",
     "start": "heroku local",
-    "postinstall": "./scripts/fixKeystoneDependencies.sh",
+    "postinstall": "npm install --prefix ./node_modules/keystone babel-core@5.8.25 && npm install --prefix ./node_modules/keystone babel-plugin-object-assign@1.2.1 && npm install --prefix ./node_modules/keystone babelify@6.3.0",
     "log-staging": "heroku logs --app proud2share-staging --tail",
     "log-production": "heroku logs --app proud2share --tail"
   }
