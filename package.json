@@ -23,6 +23,7 @@
   "scripts": {
     "develop": "heroku local develop",
     "debug": "heroku local debug",
-    "start": "heroku local"
+    "start": "heroku local",
+    "postinstall": "scripts/fixKeystoneDependencies.sh"
   }
 }
