@@ -6,7 +6,7 @@ section.module.stories
 
       div.story
 
-        h2 Meet #{story.name}
+        h2 Meet #{story.firstName} #{story.lastName}
 
         p Homeless for #{story.yearsHomeless}
 
@@ -19,4 +19,4 @@ section.module.stories
 
         | !{story.content}
 
-        button Call to Action
+        a(href="/stories?name=#{firstName}#{lastName}") See #{story.firstName}'s Story 

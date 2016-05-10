@@ -1,0 +1,18 @@
+mixin quickDonation(amounts)
+
+  if amounts and amounts.length > 1
+    form(
+      name="quickDonation"
+      action="/donate"
+      )
+
+      for amount in amounts
+        label(for="quickDonationAmount#{amount}") Donate #{amount} dollars.
+        input(
+          type="radio"
+          name="amount"
+          id="quickDonationAmount#{amount}"
+          value=amount
+        )
+
+      input(type="submit") Donate

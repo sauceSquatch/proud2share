@@ -1,0 +1,14 @@
+mixin feature(headline, linkText, linkHref)
+
+  - var name = headline.substr(0, 1).toLowerCase() + headline.substr(1);
+
+  section(class="module feature #{name}")
+
+    if headline
+      h2=headline
+
+    if block
+      block
+
+    if linkText && linkHref
+      a.button(href=linkHref) #{linkText}

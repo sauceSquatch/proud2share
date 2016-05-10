@@ -1,36 +1,33 @@
-include ../mixins/flash-messages
+include ../mixins/flashMessages
  
 unless partial
 
   doctype html
-  html
+  html(data-url=url)
     head
       meta(charset="utf-8")
       meta(name="viewport", content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width")
-      
+      block meta
+
       title= title || 'proud2share'
       link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
-      
-      link(href="/css/p2s.css", rel="stylesheet")
-      
-      block css
       block head
 
+      link(href="/css/p2s.css", rel="stylesheet")
+      block css
+
     body
-        
-      header
 
-        nav
+      include ../includes/header
 
-          a(href="/") Home
-      
       main
-          
-        +flash-messages(messages)
-        
+
+        +flashMessages(messages)
+
         block content
-      
-      footer &copy; #{new Date().getFullYear()} Proud 2 Share
+
+      include ../includes/support
+      include ../includes/footer
 
     if environment === 'production'
       script(src='//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js')
@@ -43,7 +40,7 @@ unless partial
             livereloadScript = document.createElement('script');
         livereloadScript.src = 'http://' + host + ':35729/livereload.js?snipver=1&host=' + host;
         document.body.appendChild(livereloadScript);
-    
+
     script.
       if (!jQuery) {
         var script = document.createElement('script');
@@ -51,7 +48,7 @@ unless partial
         document.body.appendChild('script');
       }
     script(src='/js/p2s.js')
-    
+
     block js
 
 else

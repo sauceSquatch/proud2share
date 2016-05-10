@@ -1,0 +1,18 @@
+section.module.statistics
+
+  if statistics && statistics.length
+
+    h2 The statistics surrounding our community are startling.
+
+    each statistic in statistics
+
+      div.statistic
+
+        img(
+          src="sample"
+          alt="sample"
+        )
+
+        p Sample statistic copy
+
+    a.button(href="/get-involved") Get Involved

@@ -1,0 +1,13 @@
+include ../mixins/quickDonate
+
+section.module.donation
+
+  //- Donations will be processed by The Groundwork
+  //- https://cdn.thegroundwork.com/groundworkjs/doc/class/src/Donation.js~Donation.html
+
+  h2 Swap a lace, change a life
+
+  noscript
+    p You must have JavaScript enabled to donate.
+
+  +quickDonate([5,15,25,100])
