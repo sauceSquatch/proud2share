@@ -13,9 +13,10 @@ exports.initLocals = (request, response, next) => {
   let locals = response.locals;
 
   locals.environment = (process.env.NODE_ENV === 'production') ? 'production' : 'development'
-  locals.partial = !!request.query.partial || false;
-  locals.user = request.user;
-  locals.modules = [];
+  locals.partial     = !!request.query.partial || false;
+  locals.modules     = [];
+  locals.user        = request.user;
+  locals.url         = request.url;
 
   next();
 
@@ -30,14 +31,14 @@ exports.initErrorHandlers = (request, response, next) => {
     response.status(500).render('errors/500', {
       err: err,
       errorTitle: title,
-      errorMsg: message
+      errorMsg:   message
     });
   };
 
   response.notfound = (title, message) => {
     response.status(404).render('errors/404', {
       errorTitle: title,
-      errorMsg: message
+      errorMsg:   message
     });
   };
 
@@ -51,10 +52,10 @@ exports.initErrorHandlers = (request, response, next) => {
 exports.flashMessages = (request, response, next) => {
 
   var flashMessages = {
-    info: request.flash('info'),
+    info:    request.flash('info'),
     success: request.flash('success'),
     warning: request.flash('warning'),
-    error: request.flash('error')
+    error:   request.flash('error')
   };
 
   response.locals.messages = _.any(flashMessages, (msgs) => msgs.length ) ? flashMessages : false;
