@@ -3,10 +3,15 @@
 let keystone = require('keystone'),
     Types = keystone.Field.Types;
 
-let Stories = new keystone.List('Stories', {singular: 'Story'});
+let Stories = new keystone.List('Stories', { map: { name: 'lastName' }, singular: 'Story' });
 
 Stories.add({
-  name: {
+  firstName: {
+    type: Types.Text,
+    initial: true,
+    required: true
+  },
+  lastName: {
     type: Types.Text,
     initial: true,
     required: true,
@@ -44,5 +49,7 @@ Stories.add({
     initial: true
   }
 });
+
+Stories.defaultColumns = 'firstName, lastName';
  
 Stories.register();
