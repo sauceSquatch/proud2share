@@ -7,6 +7,7 @@ exports = module.exports = (request, response) => {
   let view = new keystone.View(request, response),
       locals = response.locals;
 
+  locals.title   = 'Home'
   locals.section = 'home';
   locals.modules = ['stories','sponsors'];
 
