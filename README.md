@@ -2,6 +2,11 @@
 
 This is the `proud2share.org` site, a pro bono undertaking of the Razorfish central region. The site is a [Node JS](https://nodejs.org) application hosted on [Heroku](https://www.heroku.com) with a [Mongo DB](https://docs.mongodb.org/manual/) instance from mCloud. [Keystone.js](http://keystonejs.com/docs/) is the content management system. All JavaScript, both client and server side, is written in [ECMAScript 6](http://es6-features.org/). Client-side JavaScript is compiled to ECMAScript 5 using [Babel](https://babeljs.io/). HTML is compiled from [Jade](http://jade-lang.com/) templates and the CSS is compiled from [SASS](http://sass-lang.com/).
 
+## tldr;
+
+- `npm install`
+- `npm run develop`
+
 ## File Structure
 
 - lib - server side "classes" and module initializations
