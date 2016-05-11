@@ -17,12 +17,11 @@ Stories.add({
     required: true,
     index: true
   },
-  // image: {
-  //   type: Types.CloudinaryImage,
-  //   initial: true,
-  //   autoCleanup: true,
-  //   select: true
-  // },
+  image: {
+    type: Types.CloudinaryImage,
+    autoCleanup: true,
+    select: true
+  },
   birthDate: {
     type: Types.Date,
     initial: true,

@@ -17,12 +17,11 @@ Sponsors.add({
     initial: true,
     required: false
   },
-  // image: {
-  //   type: Types.CloudinaryImage,
-  //   initial: true,
-  //   autoCleanup: true,
-  //   select: true
-  // },
+  image: {
+    type: Types.CloudinaryImage,
+    autoCleanup: true,
+    select: true
+  },
   published: {
     type: Boolean,
     initial: true

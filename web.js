@@ -32,6 +32,10 @@ keystone.init({
   
 });
 
+// Configure Cloudinary
+keystone.set('cloudinary config', CONFIG.get('CLOUDINARY_URL'));
+keystone.set('cloudinary secure', false);
+
 // Compile CSS and JS
 compiler.compile('/src/css/', '/public/css/');
 compiler.compile('/src/js/', '/public/js/');
