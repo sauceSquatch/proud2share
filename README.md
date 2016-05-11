@@ -4,6 +4,11 @@ This is the `proud2share.org` site, a pro bono undertaking of the Razorfish cent
 
 ## tldr;
 
+- `git clone https://github.com/Razorfish-Central/proud2share.git`
+- `cp env.env .env` <- get the `env.env` file from Slack
+- `nvm install v5.10.1`
+- `nvm alias p2s v5.10.1`
+- `nvm use p2s`
 - `npm install`
 - `npm run develop`
 
