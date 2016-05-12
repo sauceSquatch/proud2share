@@ -1,0 +1,23 @@
+body {
+  font-family: $fontStack;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $fontStackHeading;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: $fontSizeH1; 
+}
+
+h2 {
+  font-size: $fontSizeH2; 
+}
+
+h3 {
+  font-size: $fontSizeH3; 
+}
