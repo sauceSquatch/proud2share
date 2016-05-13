@@ -1,20 +1,20 @@
 'use strict';
 
-export function Link (node) {
-  
-  if (!node || node.nodeName !== 'A') {
-    return undefined;
+export default class Link {
+
+  constructor(node) {
+
+    node.on('click', this.navigate);
+    this.node = node;
+
   }
 
-  this.node = node;
-  this.node.addEventListener('click', (event) => this.navigate(event));
+  navigate(event) {
+  
+    console.log(event);
+    event.preventDefault();
+    return false;
+
+  }
 
 }
-
-Link.prototype.navigate = (event) => {
-  
-  console.log(event);
-  event.preventDefault();
-  return false;
-
-};
