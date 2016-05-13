@@ -1,4 +1,5 @@
 body {
+  box-sizing: border-box;
   font-family: $fontStack;
   font-size: $fontSize;
   font-weight: $fontWeight;
@@ -20,4 +21,100 @@ h2 {
 
 h3 {
   font-size: $fontSizeH3; 
+}
+
+button,
+a.button,
+input.button {
+  padding: $buttonPadding;
+  border: $buttonBorderWidth $buttonBorderStyle $buttonBorderColor;
+  border-radius: $buttonBorderRadius;
+  background: $buttonBackground;
+  color: $buttonTextColor;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    border-color: $buttonHoverBorderColor;
+    background: $buttonHoverBackground;
+    color: $buttonHoverTextColor;
+  }
+
+  &[disabled],
+  &.disabled {
+    border-color: $buttonDisabledBorderColor;
+    background: $buttonDisabledBackground;
+    color: $buttonDisabledTextColor;
+  }
+
+  &[checked],
+  &[selected],
+  &.selected {
+    border-color: $buttonSelectedBorderColor;
+    background: $buttonSelectedBackground;
+    color: $buttonSelectedTextColor;
+  }
+
+  &.secondary {
+    border-color: $buttonSecondaryBorderColor;
+    background: $buttonSecondaryBackground;
+    color: $buttonSecondaryTextColor;
+
+    &:hover {
+      background: $buttonSecondaryHoverBackground;
+      color: $buttonSecondaryHoverTextColor;
+    }
+
+  }
+
+  &.tertiary {
+    border-color: $buttonTertiaryBorderColor;
+    background: $buttonTertiaryBackground;
+    color: $buttonTertiaryTextColor;
+
+    &:hover {
+      background: $buttonTertiaryHoverBackground;
+      color: $buttonTertiaryHoverTextColor;
+    }
+
+  }
+
+  &.neutral {
+    border-color: $buttonNeutralBorderColor;
+    background: $buttonNeutralBackground;
+    color: $buttonNeutralTextColor;
+
+    &:hover {
+      background: $buttonNeutralHoverBackground;
+      color: $buttonNeutralHoverTextColor;
+    }
+
+    &[checked],
+    &[selected],
+    &.selected {
+      background: $buttonNeutralSelectedBackground;
+      color: $buttonNeutralSelectedTextColor;
+    }
+
+  }
+
+  &.inverted {
+    border-color: $buttonInvertedBorderColor;
+    background: $buttonInvertedBackground;
+    color: $buttonInvertedTextColor;
+
+    &:hover {
+      background: $buttonInvertedHoverBackground;
+      color: $buttonInvertedHoverTextColor;
+    }
+
+    &[checked],
+    &[selected],
+    &.selected {
+      background: $buttonInvertedSelectedBackground;
+      color: $buttonInvertedSelectedTextColor;
+    }
+
+  }
+
 }
