@@ -43,11 +43,11 @@ compiler.compile('/src/js/', '/public/js/');
 // Turn on source watching and Live Reload in development
 if (CONFIG.get('NODE_ENV') === 'development') {
   let livereload = require('livereload'),
-      reloadServer = livereload.createServer({ exts: ['css','js'], host: 'localhost' });
+      reloadServer = livereload.createServer({ exts: ['jade','css','js'], host: 'localhost' });
 
   console.log('Watching /src/ for changes and auto-compiling to /public/');
   compiler.watch('/src/', '/public/');
-  reloadServer.watch(__dirname + '/public/');
+  reloadServer.watch([(__dirname + '/public/'),(__dirname + '/templates/')]);
 }
  
 // Require the content models
