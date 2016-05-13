@@ -23,7 +23,7 @@
   "scripts": {
     "develop": "heroku local develop",
     "debug": "heroku local debug",
-    "start": "heroku local",
+    "start": "heroku local web",
     "log-staging": "heroku logs --app proud2share-staging --tail",
     "log-production": "heroku logs --app proud2share --tail"
   }
