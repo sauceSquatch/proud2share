@@ -1,5 +1,8 @@
-body {
+* {
   box-sizing: border-box;
+}
+
+body {
   font-family: $fontStack;
   font-size: $fontSize;
   font-weight: $fontWeight;
