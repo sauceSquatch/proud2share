@@ -40,6 +40,7 @@ node_modules
 
 # Compiled CSS
 public/css/*.css
+public/css/*.css.map
 
 # Compiled JS
 public/js/p2s.js
