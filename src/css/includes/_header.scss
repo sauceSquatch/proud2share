@@ -1,8 +1,8 @@
 body > header {
-  padding: 15px 20px 10px 20px;
+  padding: 12px 14px;
   width: 100%;
   height: 60px;
-  background: black;
+  background: $headerBackground;
 
   @media (min-width: $breakLarge) {
     padding: 20px 40px 15px 40px;
@@ -10,12 +10,9 @@ body > header {
   }
 
   h1 {
+    @include replaceWithImage($logoWhiteCompact);
     width: 30px;
     height: 35px;
-    overflow: hidden;
-    background-image: $logoWhiteCompact;
-    background-size: cover;
-    text-indent: -1000%;
 
     @media (min-width: $breakLarge) {
       width: 140px;
@@ -25,7 +22,90 @@ body > header {
 
   }
 
+  button {
+    @include replaceWithImage($menuWite);
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    padding: 0;
+    border: 0;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+
+    &:hover {
+      background-color: transparent;
+    }
+
+    &:focus {
+      outline-color: $secondaryLight;
+    }
+
+    @media (min-width: $breakLarge) {
+      display: none;
+    }
+
+  }
+
   nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $navBackground;
+    text-align: center;
+    text-transform: uppercase;
+
+    > ul {
+      @include verticallyCenter();
+      width: 100%;
+    }
+
+    li:not([data-section="action"]) {
+      margin-bottom: $navItemSpacing;
+      font-family: $fontStackHeading;
+      font-size: $fontSizeH3;
+
+      ul {
+        display: none;
+
+        [data-section="who-we-are"] &[data-section="who-we-are"],
+        [data-section="the-laces-project"] &[data-section="the-laces-project"],
+        [data-section="get-involved"] &[data-section="get-involved"] {
+          display: block;
+        }
+
+      }
+
+      li {
+        font-family: $fontStack;
+        font-size: $fontSize;
+
+        &:first-of-type {
+          margin-top: $navItemSpacing;
+        }
+
+      }
+
+    }
+
+    li.action li {
+      @extend li:not([data-section="action"]);
+    }
+
+    a {
+      color: $navItemColor;
+    }
+
+    @media (min-width: $breakLarge) {
+      background-color: transparent;
+
+      &.hidden {
+        display: block;
+      }
+
+    }
     
   }
 

@@ -2,31 +2,34 @@ header
 
   h1: a(href="/") Proud2Share
 
-  nav
+  button(aria-controls="nav" aria-expanded="true") Toggle Navigation
 
-    .primary
-      a(href="/who-we-are") Who We Are
-      a(href="/the-laces-project") The Laces Project
-      a(href="/get-involved") Get Involved
+  nav#nav
 
-    .action
-      a(href="/donate") Donate
-      a(href="/sign-in") Sign In
+    ul
 
-    .who-we-are
-      a(href="/who-we-are") About P2S
-      a(href="/lgbtq-poverty") LGBTQ Poverty
-      a(href="/lgbtq-community-fund") LGBTQ Community Fund
-      a(href="/news") News
-      a(href="/sponsors") Sponsors
+      li
+        a(href="/who-we-are") Who We Are
+        ul(data-section="who-we-are")
+          li: a(href="/who-we-are") About P2S
+          li: a(href="/news") News
+          li: a(href="/partners") Partners
 
-    .the-laces-project
-      a(href="/the-laces-project") Overview
-      a(href="/stories") Stories
-      a(href="/art-installations") Art Installations
-      a(href="/in-their-shoes") #InTheirShoes
+      li
+        a(href="/the-laces-project") The Laces Project
+        ul(data-section="the-lcaes-project")
+          li: a(href="/stories") Stories
+          li: a(href="/art-installations") Art Installations
+          li: a(href="/in-their-shoes") #InTheirShoes
 
-    .get-involved
-      a(href="/get-involved") Overview
-      a(href="/donate") Donate
-      a(href="/events") Events
+      li(data-section="get-involved")
+        a(href="/get-involved") Get Involved
+        ul
+          li: a(href="/donate") Donate
+          li: a(href="/events") Events
+          li: a(href="/sponsors") Sponsors
+
+      li(data-section="action")
+        ul
+          li: a(href="/donate") Donate
+          li: a(href="/sign-in") Sign In
