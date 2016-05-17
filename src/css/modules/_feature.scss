@@ -1,3 +1,39 @@
-.feature.module {
-  // Add some styles
+.module.feature {
+	background-image: $indexBgImg;
+	height: 500px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	display: flex;
+	flex-direction: column;
+	font-family: $fontStackHeading;
+  @media (max-width: $breakLarge) {
+    background-size: 980px;
+    background-position: top right;
+  }
+	h2, p, button {
+	  color: $secondaryLight;
+		text-align: center;
+  }
+  h2 {
+    padding: 50px 0 30px 0;
+  }
+  p {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px;
+  }
+	a.button {
+	 width: 200px;
+   height: 45px;
+   margin: 0 auto;
+   text-align: center;
+   background-color: transparent;
+   border-color: $secondaryLight;
+   text-transform: uppercase;
+   padding: 10px 12px;
+   &:hover {
+    background-color: $primaryLight;
+   }
+  }
 }
