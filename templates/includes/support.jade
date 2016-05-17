@@ -1,22 +1,24 @@
 section.support
-
-  div.social
-    a(href="#") Facebook
-    a(href="#") Twitter
-    a(href="#") Pinterest
-    a(href="#") Google Plus
-    a(href="#") You Tube
-
-  hr
-
+  
   form.newsletter(action="/register")
-    h3 Stay up-to-date with Proud2Share news and events.
+    .newsletter.content
+      h3 Join the movement
+      p Stay up-to-date with Proud2Share news and events.
 
     label(for="support_email")
     input(
       type="email"
       id="support_email"
-      name="email"
-      placeholder="youremail@domain.com"
+      name="Email Address"
+      placeholder="Email"
       )
     button Sign Up
+
+  hr
+
+  div.social
+    a.facebook(href="#")  Facebook
+    a.instagram(href="#") Instagram
+    a.twitter(href="#") Twitter
+    a.vimeo(href="#") Vimeo
+    a.youtube(href="#") Youtube
