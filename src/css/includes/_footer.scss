@@ -1,3 +1,23 @@
 body > footer {
   // Add some styles
+  background-color: $tertiaryDark;
+  text-align: center;
+  color: $secondaryLight;
+  p{
+		padding: 40px;
+		&:last-child{
+			text-align: left;
+			padding-bottom: 80px;
+		}
+  }
+  a{
+  	color: $secondaryLight;
+  	text-decoration: none;
+  	padding: 20px;
+  	margin: 20px 0;
+  	text-transform: uppercase;
+  }
+  hr{
+  	margin: 30px;
+  }
 }
