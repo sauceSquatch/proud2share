@@ -24,12 +24,14 @@
     padding: 50px;
   }
 	a.button {
-	 width: 180px;
-   height: 40px;
+	 width: 200px;
+   height: 45px;
    margin: 0 auto;
    text-align: center;
    background-color: transparent;
    border-color: $secondaryLight;
+   text-transform: uppercase;
+   padding: 10px 12px;
    &:hover {
     background-color: $primaryLight;
    }
