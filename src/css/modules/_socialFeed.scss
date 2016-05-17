@@ -1,3 +1,21 @@
 .socialFeed.module {
-  // Add some styles
+  padding: 40px 60px;
+  h2{
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  p{
+    margin-bottom: 40px;
+    text-align: center; 
+  }
+  .j-paginate.juicer-button {
+    padding: $buttonPadding;
+    border: $buttonBorderWidth $buttonBorderStyle $buttonBorderColor;
+    border-radius: $buttonBorderRadius;
+    background-color: $buttonBackground;
+    color: $buttonTextColor;
+    cursor: pointer;
+    font-size: 18px;
+  }
+
 }
