@@ -3,17 +3,17 @@ include ../mixins/flashMessages
 unless partial
 
   doctype html
-  html(data-url=url)
+  html(data-url=url data-section=section)
     head
       meta(charset="utf-8")
-      meta(name="viewport", content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width")
+      meta(name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width")
       block meta
 
       title= title || 'proud2share'
-      link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
+      link(rel="shortcut icon" href="/favicon.ico" type="image/x-icon")
       block head
 
-      link(href="/css/p2s.css", rel="stylesheet")
+      link(href="/css/p2s.css" rel="stylesheet")
       block css
 
     body
@@ -61,6 +61,7 @@ unless partial
         document.body.appendChild(livereloadScript);
 
     script.
+      //- Load local copy of jQuery if necessary
       if (!jQuery) {
         var script = document.createElement('script');
         script.src = '/js/vendor/jquery.js';
@@ -73,3 +74,6 @@ unless partial
 else
 
   block content
+
+  script.
+    $('html').attr('data-url', #{url}).attr('data-section', #{section});
