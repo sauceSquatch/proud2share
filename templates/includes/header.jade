@@ -1,3 +1,7 @@
+mixin link(href)
+  a(href=href class=url === href ? 'active' : '')
+    block
+
 header
 
   h1: a(href="/") Proud2Share
@@ -9,27 +13,27 @@ header
     ul
 
       li
-        a(href="/who-we-are") Who We Are
+        +link("/who-we-are") Who We Are
         ul(data-section="who-we-are")
-          li: a(href="/who-we-are") About P2S
-          li: a(href="/news") News
-          li: a(href="/partners") Partners
+          li: +link("/who-we-are") About P2S
+          li: +link("/news") News
+          li: +link("/partners") Partners
 
       li
-        a(href="/the-laces-project") The Laces Project
-        ul(data-section="the-lcaes-project")
-          li: a(href="/stories") Stories
-          li: a(href="/art-installations") Art Installations
-          li: a(href="/in-their-shoes") #InTheirShoes
+        +link("/the-laces-project") The Laces Project
+        ul(data-section="the-laces-project")
+          li: +link("/stories") Stories
+          li: +link("/art-installations") Art Installations
+          li: +link("/in-their-shoes") #InTheirShoes
 
-      li(data-section="get-involved")
-        a(href="/get-involved") Get Involved
-        ul
-          li: a(href="/donate") Donate
-          li: a(href="/events") Events
-          li: a(href="/sponsors") Sponsors
+      li
+        +link("/get-involved") Get Involved
+        ul(data-section="get-involved")
+          li: +link("/donate") Donate
+          li: +link("/events") Events
+          li: +link("/sponsors") Sponsors
 
       li(data-section="action")
         ul
-          li: a(href="/donate") Donate
+          li: a(href="/donate").button Donate
           li: a(href="/sign-in") Sign In

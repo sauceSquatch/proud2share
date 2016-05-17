@@ -38,9 +38,10 @@ h3 {
 a {
   text-decoration: none;
   color: $primaryDark;
+  cursor: pointer; 
 
   &:hover {
-    text-decoration: underline; 
+    text-decoration: underline;
   }
 
 }
@@ -55,10 +56,12 @@ input.button {
   color: $buttonTextColor;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     border-color: $buttonHoverBorderColor;
     background-color: $buttonHoverBackground;
     color: $buttonHoverTextColor;
+    text-decoration: none;
   }
 
   &[disabled],

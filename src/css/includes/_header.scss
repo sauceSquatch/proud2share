@@ -1,16 +1,18 @@
 body > header {
+  position: relative;
   padding: 12px 14px;
   width: 100%;
   height: 60px;
   background: $headerBackground;
 
   @media (min-width: $breakLarge) {
-    padding: 20px 40px 15px 40px;
+    padding: 22px 42px;
     height: 80px;
   }
 
   h1 {
     @include replaceWithImage($logoWhiteCompact);
+    position: absolute;
     width: 30px;
     height: 35px;
 
@@ -22,6 +24,7 @@ body > header {
 
   }
 
+  // The button is for toggling the nav at the small breakpoint
   button {
     @include replaceWithImage($menuIconWhite);
     position: absolute;
@@ -47,60 +50,174 @@ body > header {
 
   }
 
-  nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: $navBackground;
-    text-align: center;
-    text-transform: uppercase;
+  @media (max-width: $breakLarge) {
 
-    > ul {
-      @include verticallyCenter();
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
       width: 100%;
-    }
+      height: 100%;
+      background-color: $navBackground;
+      text-align: center;
+      text-transform: uppercase;
 
-    li:not([data-section="action"]) {
-      margin-bottom: $navItemSpacing;
-      font-family: $fontStackHeading;
-      font-size: $fontSizeH3;
+      > ul {
+        @include verticallyCenter();
+        width: 100%;
+      }
+
+      li:not([data-section="action"]) {
+        margin-bottom: $navItemSpacing;
+        font-family: $fontStackHeading;
+        font-size: $fontSizeH3;
 
 
-      a {
-        color: $navItemColor;
+        a {
+          color: $navItemColor;
 
-        &:focus {
-          outline-color: $navItemColor;
+          &:focus {
+            outline-color: $navItemColor;
+          }
+
+        }
+
+        ul {
+          display: none;
+
+          [data-section="who-we-are"] &[data-section="who-we-are"],
+          [data-section="the-laces-project"] &[data-section="the-laces-project"],
+          [data-section="get-involved"] &[data-section="get-involved"] {
+            display: block;
+          }
+
+        }
+
+        li {
+          font-family: $fontStack;
+          font-size: $fontSize;
+
+          &:first-of-type {
+            margin-top: $navItemSpacing;
+          }
+
+          a {
+            color: $navSubItemColor;
+
+            &:focus {
+              outline-color: $navSubItemColor;
+            }
+
+          }
+
         }
 
       }
 
-      ul {
-        display: none;
+      li.action li {
+        @extend li:not([data-section="action"]);
+      }
+      
+    }
 
-        [data-section="who-we-are"] &[data-section="who-we-are"],
-        [data-section="the-laces-project"] &[data-section="the-laces-project"],
-        [data-section="get-involved"] &[data-section="get-involved"] {
-          display: block;
-        }
+  }
 
+  // At the large breakpoint the nav is always visible
+  @media (min-width: $breakLarge) {
+
+    nav, 
+    nav.hidden {
+      display: block;
+
+      ul:not([data-section]) {
+        padding-top: 10px;
+        padding-left: 200px;
       }
 
       li {
-        font-family: $fontStack;
-        font-size: $fontSize;
+        display: inline;
 
-        &:first-of-type {
-          margin-top: $navItemSpacing;
+        &:not([data-section]) {
+          margin-right: 36px;
         }
 
-        a {
-          color: $navSubItemColor;
+      }
 
-          &:focus {
-            outline-color: $navSubItemColor;
+      a {
+        font-size: $fontSizeSmall1;
+        color: $navItemColor;
+        text-transform: uppercase;
+
+        &.active {
+          cursor: default;
+        }
+
+      }
+
+      [data-section="home"] & a {
+        color: $navItemColor;
+      }
+
+      [data-section="who-we-are"] & ul:not([data-section]) > li > a[href="/who-we-are"],
+      [data-section="the-laces-project"] & ul:not([data-section]) > li > a[href="/the-laces-project"],
+      [data-section="get-involved"] & ul:not([data-section]) > li > a[href="/get-involved"] {
+        font-weight: bold;
+        color: $navItemColor;
+      }
+
+      [data-section="who-we-are"] & ul:not([data-section]) > li > a:not([href="/who-we-are"]),
+      [data-section="the-laces-project"] & ul:not([data-section]) > li > a:not([href="/the-laces-project"]),
+      [data-section="get-involved"] & ul:not([data-section]) > li > a:not([href="/get-involved"]) {
+        font-weight: normal;
+        color: $secondaryDark;
+      }
+
+      ul[data-section] {
+        display: none;
+        position: absolute;
+        bottom: -40px;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        padding: 7px 120px;
+        background-color: $primaryDark;
+
+        a {
+          padding: 0 5px 10px;
+          border-bottom: 2px solid transparent;
+          font-weight: normal;
+          color: $navItemColor;
+
+          &.active {
+            font-weight: bold;
+            border-bottom-color: $tertiaryLight;
+          }
+
+        }
+
+      }
+
+      [data-section="who-we-are"] & ul[data-section="who-we-are"],
+      [data-section="the-laces-project"] & ul[data-section="the-laces-project"],
+      [data-section="get-involved"] & ul[data-section="get-involved"] {
+        display: block;
+      }
+
+      [data-section="action"] {
+        position: absolute;
+        top: 30px;
+        right: 55px;
+        width: 130px;
+
+        ul:not([data-section]) {
+          padding: 0;
+        }
+
+        li {
+          margin-right: 8px;
+
+          &:last-of-type {
+            margin-right: 0;
           }
 
         }
@@ -109,19 +226,6 @@ body > header {
 
     }
 
-    li.action li {
-      @extend li:not([data-section="action"]);
-    }
-
-    @media (min-width: $breakLarge) {
-      background-color: transparent;
-
-      &.hidden {
-        display: block;
-      }
-
-    }
-    
   }
 
 }
