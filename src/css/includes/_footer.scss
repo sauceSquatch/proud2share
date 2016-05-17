@@ -4,29 +4,29 @@ body > footer {
   text-align: center;
   color: $secondaryLight;
   p{
-		padding: 40px;
+    padding: 40px;
 		&:last-child{
-			text-align: left;
-			padding-bottom: 80px;
-			@media (max-width: $breakLarge) {
-				text-align: center;
+		  text-align: left;
+		  padding-bottom: 80px;
+		  @media (max-width: $breakLarge) {
+		    text-align: center;
         padding: 20px 0 40px 0;
 			}
 		}
   }
   a{
-  	color: $secondaryLight;
-  	text-decoration: none;
-  	padding: 20px;
-  	margin: 20px 0;
-  	text-transform: uppercase;
-  	@media (max-width: $breakLarge) {
-			display: block;
-			font-size: $fontSizeMobile;
-			margin: 0 auto;
+    color: $secondaryLight;
+    text-decoration: none;
+    padding: 20px;
+    margin: 20px 0;
+    text-transform: uppercase;
+    @media (max-width: $breakLarge) {
+		  display: block;
+		  font-size: $fontSizeMobile;
+		  margin: 0 auto;
 		}
   }
   hr{
-  	margin: 30px;
+    margin: 30px;
   }
 }
