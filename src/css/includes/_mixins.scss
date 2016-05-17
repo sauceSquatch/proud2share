@@ -1,0 +1,13 @@
+@mixin replaceWithImage($image) {
+  overflow: hidden;
+  background-image: $image;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-indent: -1000%;
+}
+
+@mixin verticallyCenter() {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}

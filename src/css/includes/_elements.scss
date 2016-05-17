@@ -1,5 +1,14 @@
 * {
   box-sizing: border-box;
+
+  &.hidden {
+    display: none;
+  }
+
+  &:focus {
+    outline: 2px dotted $primaryDark;
+  }
+
 }
 
 body {
@@ -26,27 +35,36 @@ h3 {
   font-size: $fontSizeH3; 
 }
 
+a {
+  text-decoration: none;
+  color: $primaryDark;
+
+  &:hover {
+    text-decoration: underline; 
+  }
+
+}
+
 button,
 a.button,
 input.button {
   padding: $buttonPadding;
   border: $buttonBorderWidth $buttonBorderStyle $buttonBorderColor;
   border-radius: $buttonBorderRadius;
-  background: $buttonBackground;
+  background-color: $buttonBackground;
   color: $buttonTextColor;
-  text-decoration: none;
   cursor: pointer;
 
   &:hover {
     border-color: $buttonHoverBorderColor;
-    background: $buttonHoverBackground;
+    background-color: $buttonHoverBackground;
     color: $buttonHoverTextColor;
   }
 
   &[disabled],
   &.disabled {
     border-color: $buttonDisabledBorderColor;
-    background: $buttonDisabledBackground;
+    background-color: $buttonDisabledBackground;
     color: $buttonDisabledTextColor;
   }
 
@@ -54,17 +72,17 @@ input.button {
   &[selected],
   &.selected {
     border-color: $buttonSelectedBorderColor;
-    background: $buttonSelectedBackground;
+    background-color: $buttonSelectedBackground;
     color: $buttonSelectedTextColor;
   }
 
   &.secondary {
     border-color: $buttonSecondaryBorderColor;
-    background: $buttonSecondaryBackground;
+    background-color: $buttonSecondaryBackground;
     color: $buttonSecondaryTextColor;
 
     &:hover {
-      background: $buttonSecondaryHoverBackground;
+      background-color: $buttonSecondaryHoverBackground;
       color: $buttonSecondaryHoverTextColor;
     }
 
@@ -72,11 +90,11 @@ input.button {
 
   &.tertiary {
     border-color: $buttonTertiaryBorderColor;
-    background: $buttonTertiaryBackground;
+    background-color: $buttonTertiaryBackground;
     color: $buttonTertiaryTextColor;
 
     &:hover {
-      background: $buttonTertiaryHoverBackground;
+      background-color: $buttonTertiaryHoverBackground;
       color: $buttonTertiaryHoverTextColor;
     }
 
@@ -84,18 +102,18 @@ input.button {
 
   &.neutral {
     border-color: $buttonNeutralBorderColor;
-    background: $buttonNeutralBackground;
+    background-color: $buttonNeutralBackground;
     color: $buttonNeutralTextColor;
 
     &:hover {
-      background: $buttonNeutralHoverBackground;
+      background-color: $buttonNeutralHoverBackground;
       color: $buttonNeutralHoverTextColor;
     }
 
     &[checked],
     &[selected],
     &.selected {
-      background: $buttonNeutralSelectedBackground;
+      background-color: $buttonNeutralSelectedBackground;
       color: $buttonNeutralSelectedTextColor;
     }
 
@@ -103,18 +121,18 @@ input.button {
 
   &.inverted {
     border-color: $buttonInvertedBorderColor;
-    background: $buttonInvertedBackground;
+    background-color: $buttonInvertedBackground;
     color: $buttonInvertedTextColor;
 
     &:hover {
-      background: $buttonInvertedHoverBackground;
+      background-color: $buttonInvertedHoverBackground;
       color: $buttonInvertedHoverTextColor;
     }
 
     &[checked],
     &[selected],
     &.selected {
-      background: $buttonInvertedSelectedBackground;
+      background-color: $buttonInvertedSelectedBackground;
       color: $buttonInvertedSelectedTextColor;
     }
 

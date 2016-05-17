@@ -1,7 +1,7 @@
 'use strict';
 
-import Link              from './lib/link';
-import Navigation        from './lib/navigation';
+import Link       from './lib/link';
+import Navigation from './lib/navigation';
 
 (($) => {
 
