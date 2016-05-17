@@ -1,6 +1,6 @@
 'use strict';
 
-let guid = -1;
+let guid = 0;
 
 export function getRandomNumber(min, max) {
   return Math.random() * (max - min) + min;
