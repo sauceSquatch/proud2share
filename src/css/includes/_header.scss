@@ -23,7 +23,7 @@ body > header {
   }
 
   button {
-    @include replaceWithImage($menuWite);
+    @include replaceWithImage($menuIconWhite);
     position: absolute;
     top: 22px;
     right: 22px;
@@ -67,6 +67,16 @@ body > header {
       font-family: $fontStackHeading;
       font-size: $fontSizeH3;
 
+
+      a {
+        color: $navItemColor;
+
+        &:focus {
+          outline-color: $navItemColor;
+        }
+
+      }
+
       ul {
         display: none;
 
@@ -86,16 +96,21 @@ body > header {
           margin-top: $navItemSpacing;
         }
 
+        a {
+          color: $navSubItemColor;
+
+          &:focus {
+            outline-color: $navSubItemColor;
+          }
+
+        }
+
       }
 
     }
 
     li.action li {
       @extend li:not([data-section="action"]);
-    }
-
-    a {
-      color: $navItemColor;
     }
 
     @media (min-width: $breakLarge) {

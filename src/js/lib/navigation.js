@@ -8,6 +8,7 @@ export default class Navigation {
 
     let instance, 
         button,
+        links,
         id;
 
     button = $('[aria-controls="' + node.attr('id') + '"]');
@@ -16,20 +17,22 @@ export default class Navigation {
       return undefined;
     }
 
+    links = $('a', node);
     id = getUniqueID('nav');
     
     button
       .attr('aria-controls', id)
       .attr('aria-expanded', false)
-      .on('click', (event) => this.toggle(event));
+      .on('click focusout', (event) => this.toggle(event));
 
     node
       .attr('id', id)
       .addClass('hidden')
       .before(button)
-      .on('click', (event) => this.toggle(event));
+      .on('click focusin focusout', (event) => this.toggle(event));
 
     this.node = node;
+    this.links = links;
     this.button = button;
 
   }
@@ -37,10 +40,26 @@ export default class Navigation {
   toggle(event) {
 
     let target = $(event.target),
+        activeEl = $(document.activeElement),
         expanding = this.node.is('.hidden');
 
-    if (!target.is(this.button)) {
-      expanding = false;
+    switch (event.type) {
+      case 'click':
+        expanding = target.is(this.button) ? expanding : false;
+        break;
+      case 'focusin':
+        expanding = target.is(this.links);
+        break;
+      case 'focusout':
+        if (this.waitingToToggle) {
+          this.waitingToToggle = false;
+          expanding = activeEl.is(this.links) || activeEl.is(this.button);
+        }
+        else {
+          this.waitingToToggle = true;
+          return setTimeout(() => { this.toggle(event) }, 100);
+        }
+        break;
     }
 
     this.button.attr('aria-expanded', expanding);
