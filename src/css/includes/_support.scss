@@ -20,15 +20,15 @@ body > .support {
         text-align: center;
       }
       button {
-        background-color: transparent;
-        border-color: $secondaryLight;
+        background-color: $tertiaryLight;
+        border-color: $buttonTertiaryBorderColor;
         text-transform: uppercase;
         font-family: $fontStackHeading;
         width: 120px;
         height: 40px;
+        letter-spacing: 0.5px;
+        font-size: 16px;
         &:hover {
-          background: $primaryLight;
-          color: white;
         }
       }
       #support_email {
@@ -37,6 +37,8 @@ body > .support {
         height: 40px;
         text-align: center;
         margin: 0 20px;
+        background-color: #d7d7d7;
+        border-radius: $buttonBorderRadius;
         @media (max-width: $breakLarge) {
           display: block;
           text-align: center;
