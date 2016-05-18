@@ -61,6 +61,7 @@ body > header {
       background-color: $navBackground;
       text-align: center;
       text-transform: uppercase;
+      z-index: 1;
 
       > ul {
         @include verticallyCenter();
