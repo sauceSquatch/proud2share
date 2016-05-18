@@ -32,8 +32,11 @@
    border-color: $secondaryLight;
    text-transform: uppercase;
    padding: 10px 12px;
+   border: 2px $buttonBorderStyle $secondaryLight;
    &:hover {
-    background-color: $primaryLight;
+    background-color: $secondaryDark;
+    color: $secondaryLight;
+    border: 2px $buttonBorderStyle $secondaryDark;
    }
   }
 }
