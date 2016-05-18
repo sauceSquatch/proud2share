@@ -29,7 +29,7 @@ body > .support {
         letter-spacing: 0.5px;
         font-size: 16px;
         &:hover, &:focus{
-          background-color: $tertiaryHover;
+          background-color: $buttonTertiaryHoverBackground;
           border: $buttonBorderWidth $buttonBorderStyle $tertiaryHover
         }
       }
