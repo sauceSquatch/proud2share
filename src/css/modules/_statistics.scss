@@ -1,7 +1,7 @@
 .statistics.module {
 	background-color: $primaryDark;
 	color: $secondaryLight;
-	padding: 40px 50px;
+	padding: 40px 100px;
 
 	h2{
 		text-align: center;
@@ -35,7 +35,8 @@
   		// width: 30%;
   		display: inline-block;
   		img{
-  			height: 200px;
+  			width: 200px;
+  			margin-bottom: 45px;
   		}
   	}
   }
