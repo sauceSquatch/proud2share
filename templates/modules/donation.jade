@@ -1,4 +1,4 @@
-include ../mixins/quickDonate
+include ../mixins/quickDonation
 
 section.module.donation
 
@@ -7,7 +7,11 @@ section.module.donation
 
   h2 Swap a lace, change a life
 
+  p Donate and change your lace to help raise awarenewss about LGBTQ poverty.
+
   noscript
     p You must have JavaScript enabled to donate.
 
-  +quickDonate([5,15,25,100])
+  +quickDonation([5,15,25,100])
+
+  .donation.laces
