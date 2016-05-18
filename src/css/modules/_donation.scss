@@ -52,8 +52,10 @@
     padding: $buttonPadding;
     border-radius: $buttonBorderRadius;
     border: $buttonBorderWidth $buttonBorderStyle $buttonBorderColor;
+    letter-spacing: 0.5px;
     &:hover {
       cursor: pointer;
+      background-color: $buttonHoverBackground;
     }
   }
   input[type="radio"] {
