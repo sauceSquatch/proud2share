@@ -29,7 +29,7 @@
       margin: 2px;
     }
     &:hover {
-      background-color: $buttonBackground;
+      background-color: $buttonNeutralHoverBackground;
       color: $buttonTextColor;
     }
   }
@@ -55,7 +55,8 @@
     letter-spacing: 0.5px;
     &:hover {
       cursor: pointer;
-      background-color: $buttonHoverBackground;
+      background-color: $buttonSelectedBackground;
+      border: none;
     }
   }
   input[type="radio"] {
