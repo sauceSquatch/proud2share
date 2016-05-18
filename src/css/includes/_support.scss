@@ -30,7 +30,7 @@ body > .support {
         font-size: 16px;
         &:hover, &:focus{
           background-color: $buttonTertiaryHoverBackground;
-          border: $buttonBorderWidth $buttonBorderStyle $tertiaryHover
+          border: $buttonBorderWidth $buttonBorderStyle $buttonTertiaryHoverBackground;
         }
       }
       #support_email {
