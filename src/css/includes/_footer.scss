@@ -5,9 +5,10 @@ body > footer {
   color: $secondaryLight;
   p{
     padding: 40px;
-		&:last-child{
+	  &:last-child{
 		  text-align: left;
 		  padding-bottom: 80px;
+      font-size: $fontSizeSmall1;
 		  @media (max-width: $breakLarge) {
 		    text-align: center;
         padding: 20px 0 40px 0;
@@ -20,9 +21,9 @@ body > footer {
     padding: 20px;
     margin: 20px 0;
     text-transform: uppercase;
+    font-size: 14px;
     @media (max-width: $breakLarge) {
 		  display: block;
-		  font-size: $fontSizeSmall1;
 		  margin: 0 auto;
 		}
   }
