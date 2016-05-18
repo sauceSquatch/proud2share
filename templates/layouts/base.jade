@@ -16,8 +16,6 @@ unless partial
       link(href="/css/p2s.css" rel="stylesheet")
       block css
 
-      script(src='//assets.juicer.io/embed.js', type='text/javascript')
-
     body
 
       include ../includes/header
@@ -70,6 +68,7 @@ unless partial
         document.body.appendChild('script');
       }
     script(src='/js/p2s.js')
+    script(src='/js/vendor/juicer.js')
 
     block js
 
