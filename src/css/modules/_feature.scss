@@ -24,7 +24,7 @@
     padding: 50px;
   }
 	a.button {
-	 width: 200px;
+	 width: 205px;
    height: 45px;
    margin: 0 auto;
    text-align: center;
@@ -33,6 +33,7 @@
    text-transform: uppercase;
    padding: 10px 12px;
    border: 2px $buttonBorderStyle $secondaryLight;
+   letter-spacing: 0.5px;
    &:hover {
     background-color: $secondaryDark;
     color: $secondaryLight;

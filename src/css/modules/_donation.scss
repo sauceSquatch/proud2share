@@ -28,7 +28,7 @@
       width: 75px;
       margin: 2px;
     }
-    &:hover {
+    &:hover, &:focus {
       background-color: $buttonNeutralHoverBackground;
       color: $buttonTextColor;
     }
@@ -53,9 +53,10 @@
     border-radius: $buttonBorderRadius;
     border: $buttonBorderWidth $buttonBorderStyle $buttonBorderColor;
     letter-spacing: 0.5px;
-    &:hover {
+    &:hover, &:focus {
       cursor: pointer;
       background-color: $buttonHoverBackground;
+      border-color: $buttonHoverBorderColor;
     }
   }
   input[type="radio"] {

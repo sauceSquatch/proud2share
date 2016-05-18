@@ -28,7 +28,9 @@ body > .support {
         height: 40px;
         letter-spacing: 0.5px;
         font-size: 16px;
-        &:hover {
+        &:hover, &:focus{
+          background-color: $tertiaryHover;
+          border: $buttonBorderWidth $buttonBorderStyle $tertiaryHover
         }
       }
       #support_email {
