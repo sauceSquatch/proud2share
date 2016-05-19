@@ -34,13 +34,13 @@ body > .support {
         }
       }
       #support_email {
-        border-radius: 2px;
         width: 370px;
         height: 40px;
         text-align: center;
         margin: 0 20px;
         background-color: #d7d7d7;
         border-radius: $buttonBorderRadius;
+        border: none;
         @media (max-width: $breakLarge) {
           display: block;
           text-align: center;
