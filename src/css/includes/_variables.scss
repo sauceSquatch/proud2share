@@ -65,12 +65,14 @@ $buttonSecondaryTextColor: $buttonBackground;
 $buttonSecondaryHoverBackground: $buttonBackground;
 $buttonSecondaryHoverTextColor: white;
 
-$buttonTertiaryBackground: white;
+$buttonTertiaryBackground: $tertiaryLight;
 $buttonTertiaryBorderColor: $tertiaryLight;
-$buttonTertiaryTextColor: $buttonTertiaryBorderColor;
+$buttonTertiaryTextColor: $buttonTextColor;
+
 
 $buttonTertiaryHoverBackground: #35c8f5;
-$buttonTertiaryHoverTextColor: white;
+$buttonTertiaryHoverBorderColor: $buttonTertiaryHoverBackground;
+
 
 $buttonNeutralBackground: white;
 $buttonNeutralBorderColor: $secondaryDark;

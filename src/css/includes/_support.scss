@@ -20,18 +20,12 @@ body > .support {
         text-align: center;
       }
       button {
-        background-color: $tertiaryLight;
-        border-color: $buttonTertiaryBorderColor;
         text-transform: uppercase;
         font-family: $fontStackHeading;
         width: 120px;
         height: 40px;
         letter-spacing: 0.5px;
         font-size: 16px;
-        &:hover, &:focus{
-          background-color: $buttonTertiaryHoverBackground;
-          border: $buttonBorderWidth $buttonBorderStyle $buttonTertiaryHoverBackground;
-        }
       }
       #support_email {
         width: 370px;
