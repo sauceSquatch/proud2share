@@ -35,4 +35,8 @@ exports = module.exports = (app) => {
   // Home Page  
   app.get('/', routes.views.index)
 
+  // Register
+
+  app.get('/register', routes.views.register);
+
 }
