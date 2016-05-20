@@ -25,11 +25,12 @@ $tertiaryDark: #000;
 $tertiaryLight: #00adee;
 
 // Typography
-$fontImport: 'https://fonts.googleapis.com/css?family=Raleway:700';
-$fontStack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$fontImport: 'https://fonts.googleapis.com/css?family=Raleway:700,400';
+$fontStack: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $fontStackHeading: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $fontSize: 18px;
-$fontWeight: normal;
+$fontWeight: 400;
+$fontWeightHeading: 700;
 $lineHeight: 1.33em;
 $fontSizeH1: 3.14em; // ~60px
 $fontSizeH2: 2.14em; // ~40px
