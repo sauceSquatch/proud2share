@@ -94,11 +94,10 @@ input.button {
   &.tertiary {
     border-color: $buttonTertiaryBorderColor;
     background-color: $buttonTertiaryBackground;
-    color: $buttonTertiaryTextColor;
-
+    
     &:hover {
       background-color: $buttonTertiaryHoverBackground;
-      color: $buttonTertiaryHoverTextColor;
+      border-color: $buttonTertiaryHoverBorderColor;
     }
 
   }

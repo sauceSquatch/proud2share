@@ -16,6 +16,10 @@
     color: $buttonTextColor;
     cursor: pointer;
     font-size: 18px;
+    &:hover, &:focus {
+      border-color: $buttonHoverBorderColor;
+      background-color: $buttonHoverBackground;
+    }
   }
 
 }
