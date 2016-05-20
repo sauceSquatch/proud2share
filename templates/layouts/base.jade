@@ -74,7 +74,6 @@ unless partial
 
 else
 
+  meta(itemprop="section" content=section)
+  meta(itemprop="title" content=title)
   block content
-
-  script.
-    $('html').attr('data-url', #{url}).attr('data-section', #{section});
