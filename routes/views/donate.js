@@ -9,7 +9,6 @@ exports = module.exports = (request, response) => {
 
   locals.title   = 'Donate'
   locals.section = 'donate';
-  locals.modules = ['stories'];
 
   view.render('donate');
     

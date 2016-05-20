@@ -23,7 +23,7 @@ export default class Viewmaster {
       return undefined;
     }
 
-    doc.node.on('click.viewmaster', (event) => this.filterClicks(event))
+    doc.node.on('click.viewmaster', 'a', (event) => this.filterClicks(event))
 
     this.index = window.history.length - 1;
     this.current = new View(viewNode);
@@ -56,7 +56,7 @@ export default class Viewmaster {
         view,
         target;
 
-    link = $(event.target);
+    link = $(event.currentTarget);
 
     if (!link.is('a')) {
       return undefined;
