@@ -19,18 +19,13 @@
     display: inline-block;
     height: 50px;
     width: 100px;
-    border: 3px $buttonBorderStyle $secondaryDark;
     color: $secondaryDark;
-    border-radius: 5px;
+    border-radius: $buttonBorderRadius;
     padding: 10px;
     margin: 10px;
     @media (max-width: $breakLarge) {
       width: 75px;
       margin: 2px;
-    }
-    &:hover, &:focus {
-      background-color: $buttonNeutralHoverBackground;
-      color: $buttonTextColor;
     }
   }
   .donation.laces {
