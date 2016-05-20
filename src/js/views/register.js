@@ -6,32 +6,39 @@ export default class RegistrationForm {
 
   constructor(node) {
 
-    var gw = new Groundwork({
-      apiKey: p2s.credentials.theGroundwork
-    });
-
-    node.
+    this.node = node
       .on('submit', (event) => this.submit(event));
   }
 
   submit(event) {
-    let form = node[0];
+    event.preventDefault();
 
-    // Must have an email and source!
-    if (form.email && form.source) {
+    let form = this.node[0];
 
-      displayMessage('-- Saving information --');
+    // Client side check
+    var profileData = {
+      email: document.getElementById('register_email').value,
+      password: document.getElementById('register_password').value,
+      source: "Proud2Share Register Form"
+      //confirmPassword: document.getElementById('confirm_password').value
+    };
 
-      // Sent the form data to the API, this will return a Promise
-      // you can handle
-      gw.supporters.create(form)
-        .then(handleSuccess)
-        .catch(handleError);
-      
-    console.log("handleError", handleError);
+    //console.log(profileData);
 
-    } else {
-      displayMessage('Please enter an email!');
-    }
+    // Sent the form data to the API, this will return a Promise
+    // you can handle
+    p2s.gw.profiles.create(profileData)
+      .then(this.handleSuccess)
+      .catch(this.handleErrors);
+    
+    return false;
   }
+
+  handleSuccess(res) { 
+    console.log("success");
+  }
+
+  handleErrors(err) {
+    console.log(err);
+  } 
 }
