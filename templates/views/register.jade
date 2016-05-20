@@ -1,0 +1,47 @@
+extends ../layouts/base
+ 
+block content
+
+  .register.view
+
+    form.register(action="" method="post")
+
+      h2 Register
+
+      p Email
+      
+      label(for="Email Address")
+      input(
+        type="email"
+        id="register_email"
+        name="Email Address"
+        placeholder="Email@Email.com"
+        )
+      
+      .password-container
+        p Password
+        
+        label(for="Password")
+        input(
+          type="text"
+          id="register_password"
+          name="Password"
+          )
+
+        a(href="#") Reset Password
+
+        p Confirm Password
+      
+      .confirm-password-container
+
+        label(for="Confirm Password")
+        input(
+          type="text"
+          id="confirm_password"
+          name="Confirm Password"
+        )
+
+        a(href="#") Already have an account?
+
+
+      button Register
