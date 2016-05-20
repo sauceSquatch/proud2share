@@ -10,6 +10,10 @@ import Navigation from './lib/navigation';
     window.p2s = {};
   }
 
+  p2s.credentials = {
+    theGroundwork: `pub-p2s-test.proud2share--tF2JaIB.LeUBEwwrCTW7CtcNEMqL2zPbdcLHMkFKe9z_8MBNAOWJxI4GLTvl0FsfGHobqB3xLkyVi_EIwQRu9w`
+  };
+
   p2s.document   = new Document($(document.documentElement));
   p2s.navigation = new Navigation($('header nav'));
   p2s.viewmaster = new Viewmaster($('main'));

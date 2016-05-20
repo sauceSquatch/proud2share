@@ -1,0 +1,100 @@
+.register.view {
+  // Add some styles
+  background-image: $registerBgImg;
+  background-size: cover;
+  height: 665px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding-top: 50px;
+  @media (max-width: $breakLarge) {
+    height: 800px;
+  }
+  form {
+    height: 560px;
+    width: 45%;
+    background-color: white;
+    margin: auto;
+    padding: 30px;
+    @media (max-width: $breakLarge) {
+      width: 90%;
+      height: 660px;
+    }
+    h2{
+      padding: 50px 20px 35px;
+      text-align: center;
+      color: $secondaryDark;
+      font-weight: 700;
+    }
+    h4 {
+      color: $secondaryDark;
+      text-align: center;
+      padding: 0 20px 25px;
+      font-size: 14px;
+    }
+    p {
+      padding: 10px 5%;
+      color: $secondaryDark;
+      font-size: 16px;
+    }
+    a {
+      color: $tertiaryLight;
+      font-size: 16px;
+    }
+    input {
+      width: 90%;
+      height: 35px;
+      margin: auto;
+      text-align: left;
+      padding-left: 10px;
+      background-color: #d7d7d7;
+      border-radius: $buttonBorderRadius;
+      border: none;
+      display: flex;
+      align-items: center;
+      align-content: center;
+      align-self: center;
+      @media (max-width: $breakLarge) {
+        margin: 10px auto;
+        width: 90%;
+      }
+    }
+    .password-container {
+      position: relative;
+      a {
+        position: absolute;
+        right: 5%;
+        top: 7%;
+      }
+    }
+    .confirm-password-container {
+      position: relative;
+      a {
+        position: absolute;
+        left: 5%;
+        margin-top: 20px;
+      }
+    }
+    button {
+      display: block;
+      background-color: $buttonNeutralBackground;
+      border: 2px $buttonBorderStyle $buttonTertiaryBorderColor;
+      color: $buttonTertiaryBorderColor;
+      font-family: $fontStackHeading;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin: 80px auto;
+      width: 200px;
+      height: 40px;
+      font-size: 16px;
+      font-weight: 700;
+      @media (max-width: $breakLarge) {
+        margin: 100px auto;
+      }
+      &:hover {
+        background-color: $buttonTertiaryHoverBackground;
+        color: white;
+        border: $buttonTertiaryHoverBorderColor;
+      }
+    }
+  }
+}

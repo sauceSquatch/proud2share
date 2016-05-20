@@ -19,10 +19,15 @@ section.module.feature {
   }
   h2 {
     padding: 50px 0 30px 0;
+    text-transform: uppercase;
   }
   p {
     width: 80%;
     margin: 0 auto;
     padding: 50px;
+  }
+  a.button {
+    width: 200px;
+    margin: 0 auto;
   }
 }

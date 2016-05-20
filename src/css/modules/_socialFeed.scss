@@ -1,11 +1,15 @@
 .socialFeed.module {
-  padding: 40px 60px;
+  padding: 50px 60px;
+  color: $textSecondaryDark;
+
   h2{
     margin-bottom: 40px;
     text-align: center;
+    margin-bottom: 30px;
+
   }
   p{
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     text-align: center; 
   }
   .j-paginate.juicer-button {
