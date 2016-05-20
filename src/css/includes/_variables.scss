@@ -23,6 +23,7 @@ $secondaryDark: #6f737b;
 $secondaryLight: #eee;
 $tertiaryDark: #000;
 $tertiaryLight: #00adee;
+$tertiaryExtraLight: #35c8f5;
 
 // Typography
 $fontImport: 'https://fonts.googleapis.com/css?family=Raleway:700,400';
@@ -71,10 +72,9 @@ $buttonTertiaryBackground: $tertiaryLight;
 $buttonTertiaryBorderColor: $tertiaryLight;
 $buttonTertiaryTextColor: $buttonTextColor;
 
-
-$buttonTertiaryHoverBackground: #35c8f5;
-$buttonTertiaryHoverBorderColor: $buttonTertiaryHoverBackground;
-
+$buttonTertiaryHoverBorderColor: $tertiaryExtraLight;
+$buttonTertiaryHoverBackground: $buttonTertiaryHoverBorderColor;
+$buttonTertiaryHoverTextColor: white;
 
 $buttonNeutralBackground: white;
 $buttonNeutralBorderColor: $secondaryDark;
