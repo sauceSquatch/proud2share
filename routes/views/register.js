@@ -9,7 +9,6 @@ exports = module.exports = (request, response) => {
 
   locals.title   = 'Register'
   locals.section = 'register';
-  locals.modules = ['stories','sponsors'];
 
   view.render('register');
     
