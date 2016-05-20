@@ -1,15 +1,17 @@
-.module.feature {
-	background-image: $indexBgImg;
-	height: 500px;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
-	display: flex;
-	flex-direction: column;
-	font-family: $fontStackHeading;
-  @media (max-width: $breakLarge) {
-    background-size: 980px;
-    background-position: top right;
+section.module.feature {
+  &.lace.Up{
+  	background-image: $indexBgImg;
+  	height: 500px;
+  	background-size: cover;
+  	background-repeat: no-repeat;
+  	background-position: center center;
+  	display: flex;
+  	flex-direction: column;
+  	font-family: $fontStackHeading;
+      @media (max-width: $breakLarge) {
+        background-size: 980px;
+        background-position: top right;
+    }
   }
 	h2, p, button {
 	  color: $secondaryLight;
