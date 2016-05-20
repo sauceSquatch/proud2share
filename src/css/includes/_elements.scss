@@ -93,7 +93,17 @@ input.button {
       background-color: $buttonSecondaryHoverBackground;
       color: $buttonSecondaryHoverTextColor;
     }
+  }
 
+  &.secondaryForm {
+    border: 2px $buttonBorderStyle $buttonSecondaryFormBorderColor;
+    border-color: $buttonSecondaryFormBorderColor;
+    background-color: $buttonSecondaryFormBackground;
+    color: $tertiaryLight;
+    &:hover {
+      background-color: $buttonSecondaryFormBackgroundHover;
+      color: $buttonSecondaryFormTextColor;
+    }
   }
 
   &.tertiary {
