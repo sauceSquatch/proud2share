@@ -53,7 +53,11 @@ input.button {
   border: $buttonBorderWidth $buttonBorderStyle $buttonBorderColor;
   border-radius: $buttonBorderRadius;
   background-color: $buttonBackground;
+  font-family: $fontStackHeading;
+  font-size: $buttonFontSize;
+  letter-spacing: 0.5px;
   color: $buttonTextColor;
+  text-transform: uppercase;
   cursor: pointer;
 
   &:hover,
@@ -94,9 +98,9 @@ input.button {
   &.tertiary {
     border-color: $buttonTertiaryBorderColor;
     background-color: $buttonTertiaryBackground;
-    color: $buttonTertiaryTextColor;
-
+    
     &:hover {
+      border-color: $buttonTertiaryHoverBorderColor;
       background-color: $buttonTertiaryHoverBackground;
       color: $buttonTertiaryHoverTextColor;
     }

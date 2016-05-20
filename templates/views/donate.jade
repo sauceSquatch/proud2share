@@ -1,0 +1,15 @@
+extends ../layouts/base
+
+include ../mixins/feature
+include ../mixins/quickDonation
+ 
+block content
+
+  .donate.view
+
+
+    +feature('Lace Up', 'Hear the Stories', '#')
+      p Every shoe has a story to tell—ours, with a purple lace, tells the stories of real LGBTQ people living in poverty.
+
+    include ../modules/donation.jade
+    include ../modules/stories.jade

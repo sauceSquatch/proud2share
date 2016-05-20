@@ -7,7 +7,7 @@ mixin quickDonation(amounts)
       )
 
       for amount in amounts
-        input(
+        input.button.neutral(
           type="radio"
           name="amount"
           id="quickDonationAmount#{amount}"

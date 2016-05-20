@@ -1,0 +1,20 @@
+mixin statistics(statistics)
+
+  if statistics && statistics.length
+    section(class="module statistics")
+
+      h2 The statistics surrounding our community are startling.
+      
+      ul.container
+        each statistic in statistics
+
+          li.statistic
+
+            img(
+              src="../src/images/#{statistic.url}"
+              alt=statistic.label
+            )
+
+            p #{statistic.copy}
+
+      a.button.inverted(href="/get-involved") Get Involved

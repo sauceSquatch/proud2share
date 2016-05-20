@@ -42,6 +42,7 @@ $buttonPadding: 6px 12px;
 $buttonBorderWidth: 1px;
 $buttonBorderStyle: solid;
 $buttonBorderRadius: 5px;
+$buttonFontSize: 16px;
 
 $buttonBackground: $primaryDark;
 $buttonBorderColor: $buttonBackground;
@@ -66,12 +67,14 @@ $buttonSecondaryTextColor: $buttonBackground;
 $buttonSecondaryHoverBackground: $buttonBackground;
 $buttonSecondaryHoverTextColor: white;
 
-$buttonTertiaryBackground: white;
+$buttonTertiaryBackground: $tertiaryLight;
 $buttonTertiaryBorderColor: $tertiaryLight;
-$buttonTertiaryTextColor: $buttonTertiaryBorderColor;
+$buttonTertiaryTextColor: $buttonTextColor;
 
-$buttonTertiaryHoverBackground: $buttonTertiaryBorderColor;
-$buttonTertiaryHoverTextColor: white;
+
+$buttonTertiaryHoverBackground: #35c8f5;
+$buttonTertiaryHoverBorderColor: $buttonTertiaryHoverBackground;
+
 
 $buttonNeutralBackground: white;
 $buttonNeutralBorderColor: $secondaryDark;

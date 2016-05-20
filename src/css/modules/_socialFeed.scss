@@ -9,13 +9,7 @@
     text-align: center; 
   }
   .j-paginate.juicer-button {
-    padding: $buttonPadding;
-    border: $buttonBorderWidth $buttonBorderStyle $buttonBorderColor;
-    border-radius: $buttonBorderRadius;
-    background-color: $buttonBackground;
-    color: $buttonTextColor;
-    cursor: pointer;
-    font-size: 18px;
+    @extend .button;
   }
 
 }

@@ -34,6 +34,7 @@ exports = module.exports = (app) => {
 
   // Home Page  
   app.get('/', routes.views.index)
+  app.get('/donate', routes.views.donate)
 
   // Register
 
