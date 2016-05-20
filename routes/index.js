@@ -39,5 +39,6 @@ exports = module.exports = (app) => {
   // Register
 
   app.get('/register', routes.views.register);
+  app.get('/resetPassword', routes.views.resetPassword);
 
 }
