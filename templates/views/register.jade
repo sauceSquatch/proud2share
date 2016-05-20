@@ -16,6 +16,7 @@ block content
         id="register_email"
         name="Email Address"
         placeholder="Email@Email.com"
+        required
         )
       
       .password-container
@@ -26,6 +27,7 @@ block content
           type="text"
           id="register_password"
           name="Password"
+          required
           )
 
         a(href="#") Reset Password
@@ -39,9 +41,13 @@ block content
           type="text"
           id="confirm_password"
           name="Confirm Password"
+          required
         )
 
         a(href="#") Already have an account?
 
 
-      button Register
+      button(
+        type="submit" 
+        value="Submit"
+      ) Register
