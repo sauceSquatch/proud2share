@@ -1,4 +1,43 @@
 extends ../layouts/base
  
 block content
-	h1 Hello Register
+
+  .register.view
+
+    form.register
+
+      h2 Register
+
+      p Email
+
+      input(
+        type="email"
+        id="register_email"
+        name="Email Address"
+        placeholder="Email@Email.com"
+        )
+      
+      .password-container
+        p Password
+
+        input(
+          type="text"
+          id="register_password"
+          name="Password"
+          )
+
+        a(href="#") Reset Password
+
+        p Confirm Password
+      
+      .confirm-password-container
+        input(
+          type="text"
+          id="confirm_password"
+          name="Password"
+        )
+
+        a(href="#") Already have an account?
+
+
+      button Register
