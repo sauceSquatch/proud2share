@@ -36,4 +36,8 @@ exports = module.exports = (app) => {
   app.get('/', routes.views.index)
   app.get('/donate', routes.views.donate)
 
+  // Register
+
+  app.get('/register', routes.views.register);
+
 }
