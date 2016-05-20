@@ -36,10 +36,10 @@ $fontSize: 18px;
 $fontWeight: 400;
 $fontWeightHeading: 700;
 $lineHeight: 1.33em;
-$fontSizeH1: 3.14em; // ~60px
-$fontSizeH2: 2.14em; // ~40px
-$fontSizeH3: 1.43em; // ~28px
-$fontSizeSmall1: 0.66em; // ~12px 
+$fontSizeH1: 44px;
+$fontSizeH2: 30px;
+$fontSizeH3: 20px;
+$fontSizeSmall1: 14px;
 
 // Buttons
 $buttonPadding: 6px 12px;
@@ -70,6 +70,13 @@ $buttonSecondaryTextColor: $buttonBackground;
 
 $buttonSecondaryHoverBackground: $buttonBackground;
 $buttonSecondaryHoverTextColor: white;
+
+$buttonSecondaryFormBackground: white;
+$buttonSecondaryFormBorderColor: $tertiaryLight;
+$buttonSecondaryFormTextColor: $tertiaryLight;
+
+$buttonSecondaryFormBackgroundHover: $tertiaryLight;
+$buttonSecondaryFormTextColor: white;
 
 $buttonTertiaryBackground: $tertiaryLight;
 $buttonTertiaryBorderColor: $tertiaryLight;
