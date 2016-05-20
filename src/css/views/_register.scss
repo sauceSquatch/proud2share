@@ -23,11 +23,11 @@
   		padding: 50px 20px 35px;
   		text-align: center;
   		color: $secondaryDark;
+  		font-weight: 700;
   	}
   	h4 {
   		color: $secondaryDark;
   		text-align: center;
-  		font-weight: 100;
   		padding: 0 20px 25px;
   		font-size: 14px;
   	}
@@ -86,12 +86,14 @@
   		width: 200px;
   		height: 40px;
   		font-size: 16px;
+  		font-weight: 700;
   		@media (max-width: $breakLarge) {
   			margin: 100px auto;
   		}
   		&:hover {
   		  background-color: $buttonTertiaryHoverBackground;
   			color: white;
+  			border: $buttonTertiaryHoverBorderColor;
   		}
   	}
   }

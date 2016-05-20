@@ -4,12 +4,13 @@ block content
 
   .register.view
 
-    form.register
+    form.register(action="" method="post")
 
       h2 Register
 
       p Email
-
+      
+      label(for="Email Address")
       input(
         type="email"
         id="register_email"
@@ -19,7 +20,8 @@ block content
       
       .password-container
         p Password
-
+        
+        label(for="Password")
         input(
           type="text"
           id="register_password"
@@ -31,10 +33,12 @@ block content
         p Confirm Password
       
       .confirm-password-container
+
+        label(for="Confirm Password")
         input(
           type="text"
           id="confirm_password"
-          name="Password"
+          name="Confirm Password"
         )
 
         a(href="#") Already have an account?
